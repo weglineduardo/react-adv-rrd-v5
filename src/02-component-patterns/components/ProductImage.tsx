@@ -1,9 +1,17 @@
-import { useContext } from "react";
+import { CSSProperties, useContext } from "react";
 import { ProductContext } from "../components/ProductCard";
-import style from "../styles/styles.module.css";
+import styles from "../styles/styles.module.css";
 import noImage from "../assets/no-image.jpg";
 
-export const ProductImage = ({ img = "" }) => {
+//no exporto estas props por que solo se usan aqui
+//cuando tenemso mas de una propiedad como parametros es recomendable que
+//hagamos una interface
+export interface Props {
+  img?: string;
+  className?: string;
+  style?: CSSProperties;
+}
+export const ProductImage = ({ img, className, style }: Props) => {
   const { product } = useContext(ProductContext);
 
   let imageToShow: string;
@@ -17,6 +25,11 @@ export const ProductImage = ({ img = "" }) => {
   }
 
   return (
-    <img className={style.productImg} src={imageToShow} alt={"product img"} />
+    <img
+      className={`${styles.productImg} ${className}`}
+      src={imageToShow}
+      alt={"product img"}
+      style={style}
+    />
   );
 };
