@@ -9,7 +9,7 @@ import { useShoppingCart } from "../hooks/useShoppingCart";
 import { products } from "../data/products";
 import "../styles/custom-styles.css";
 
-export const ShoppingPageCopy = () => {
+export const ShoppingPagebkp = () => {
   const { shoppingCart, onProductCountChange } = useShoppingCart();
 
   return (
