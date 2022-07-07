@@ -1,15 +1,19 @@
-import { Product } from '../interfaces/interfaces';
+import { Product } from "../interfaces/interfaces";
 
 const product1 = {
-    id: '1',
-    title: 'Coffee Mug - Card',
-    img: './coffee-mug.png'
-}
+  id: "1",
+  title: "Coffee Mug - Card",
+  img: "./coffee-mug.png",
+};
 
 const product2 = {
-    id: '2',
-    title: 'Coffee Mug - Meme',
-    img: './coffee-mug2.png'
-}
-
-export const products: Product[] = [ product1, product2 ];
+  id: "2",
+  title: "Coffee Mug - Meme",
+  img: "./coffee-mug2.png",
+};
+const product3 = {
+  id: "3",
+  title: "Coffee Mug - 3",
+  img: "./coffee-mug3.png",
+};
+export const products: Product[] = [product1, product2, product3];
